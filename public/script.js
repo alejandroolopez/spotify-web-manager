@@ -151,7 +151,7 @@
    * 
    * @param String of platlist id 
    */
-  function showSongs(id){
+  function showSongs(id) {
     $("#songs").html("");
     for (const song of u.playlists[id].songs) {
       var artists = "";
@@ -160,6 +160,12 @@
       $("#songs").append(html);
     };
   };
+
+  async function showLoadingSongs() {
+    $("#songs").html("");
+    var string = `<div class="song-loading"><div class="song-loading-thumb"></div><div class="song-loading-title"></div><div class="song-loading-authors"></div></div>`;
+    for (var i=0; i<20; i++) $("#songs").append(string);
+  }
 
   // Refresh token;
   document.getElementById('obtain-new-token').addEventListener('click', function() {
@@ -185,6 +191,8 @@
     var playlists = $("#playlists").children();
     for (var i=0; i<playlists.length; i++) $(playlists[i]).removeClass("selected-playlist-to-remove");
     $(e.currentTarget).addClass("selected-playlist-to-remove");
+
+    showLoadingSongs();
 
     if (u.playlists[playlist_id].songs.length === 0){
       var songs = await getSongsOfPlaylist(playlist_id);

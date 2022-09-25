@@ -37,6 +37,40 @@
     transition: .3s;
 }
 
+.song-loading {
+    height: 230px;
+    width: 180px;
+    margin: 15px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, .4);
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+}
+
+.song-loading-thumb {
+    height: 160px;
+    width: 160px;
+    object-fit: content;
+    border-radius: 5px;
+    margin: 10px 10px 5px 10px;
+    background: rgba(0, 0, 0, .3);
+}
+
+.song-loading-title {
+    height: 15px;
+    width: 140px;
+    background: rgba(0, 0, 0, .3);
+    margin: 10px 10px 5px 10px;
+}
+
+.song-loading-authors {
+    height: 10px;
+    width: 100px;
+    background: rgba(0, 0, 0, .2);
+    margin: 10px 10px 5px 10px;
+}
+
 .song-thumb {
     height: 160px;
     width: 160px;
