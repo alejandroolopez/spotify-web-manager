@@ -6,8 +6,8 @@ var cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const { Http2ServerRequest } = require('http2');
 
-var client_id = '3347833beea941f08fcad81bbafa75b0';
-var client_secret = 'b9e4597fb9cd4a7d811be7ab106eb3b4';
+var client_id = '';
+var client_secret = '';
 var redirect_uri = 'http://localhost/callback';
 
 var generateRandomString = function(length) {
